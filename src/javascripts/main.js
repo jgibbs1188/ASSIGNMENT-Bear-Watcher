@@ -1,8 +1,10 @@
 import '../styles/main.scss';
+import createForm from './components/bearForm';
+import pageLayout from './components/pageLayout';
 
 const init = () => {
-  $('#app').html('<h1>HELLO! You are up and running!</h1>');
-  console.log('YOU ARE UP AND RUNNING!');
+  pageLayout();
+  createForm();
 };
 
 init();
