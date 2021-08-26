@@ -10,7 +10,7 @@ const createForm = () => {
             </div>
             <div class="mb-3 bearFormImgUrl">
                 <label class="form-label"><strong>Image</strong></label>
-                <input type="url" class="form-control" id="bearImage" placeholder="www.BearsAreGreat.com">
+                <input type="url" class="form-control" id="bearPicture" placeholder="www.BearsAreGreat.com">
             </div>
             <div class="bearFormSubmitBtn">
                 <button id="bearSubmit" type="submit" class="btn btn-success">Track</button> 
