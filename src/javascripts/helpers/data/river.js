@@ -1,4 +1,4 @@
-import renderToDOM from "../renderToDOM";
+import renderToDOM from '../renderToDOM';
 
 const bears = [];
 
@@ -7,27 +7,28 @@ const cardBuilder = (array) => {
   array.forEach((bear) => {
     domString += `
     <div class="bear-card">
-        <div class="bear-card-image" style="width: 18rem;">
+
+        <div class="card bear-card-image" style="width: 18rem;">
             <img src="${bear.image}" class="card-img-top" alt="${bear.name}">
-            <div class="bear-card-body">
+            <div class="card-body">
+
                 <p class="card-text">${bear.name}</p>
             </div>
         </div>
     </div>
         `;
   });
-  renderToDOM('', domString);
+  renderToDOM('#bearCardHolder', domString);
 };
 
 const handleSubmitButtonEvent = (event) => {
   event.preventDefault();
   const newBear = {
     name: document.querySelector('#bearName').value,
-    image: document.querySelector('#bearPicture').value,
+    image: document.querySelector('#bearImage').value,
   };
   bears.push(newBear);
   cardBuilder(bears);
-  document.querySelector('form').reset();
 };
 
-export default handleSubmitButtonEvent
+export default handleSubmitButtonEvent;
